@@ -1,0 +1,11 @@
+--2012-04-09 21:06:54--  https://dl-ssl.google.com/linux/linux_signing_key.pub
+Resolving dl-ssl.google.com... 173.194.72.190, 173.194.72.91, 173.194.72.93, ...
+Connecting to dl-ssl.google.com|173.194.72.190|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1745 (1.7K) [text/plain]
+Saving to: `linux_signing_key.pub'
+
+     0K .                                                     100%  197K=0.009s
+
+2012-04-09 21:06:56 (197 KB/s) - `linux_signing_key.pub' saved [1745/1745]
+
