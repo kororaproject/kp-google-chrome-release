@@ -1,6 +1,6 @@
 Name:   google-chrome-release
 Version:  1.1
-Release:  1%{?dist}.1
+Release:  1%{?dist}.2
 Summary:  Google Chrome repository configuration
 
 Group:  System Environment/Base
