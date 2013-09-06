@@ -1,6 +1,6 @@
 Name:   google-chrome-release
 Version:  1.1
-Release:  2%{?dist}
+Release:  2%{?dist}.1
 Summary:  Google Chrome repository configuration
 
 Group:  System Environment/Base
@@ -33,7 +33,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root,-)
 %doc
 /etc/pki/rpm-gpg/RPM-GPG-KEY-google-chrome
-%(config noreplace)/etc/yum.repos.d/google-chrome.repo
+%config(noreplace) /etc/yum.repos.d/google-chrome.repo
 
 %changelog
 * Sat Aug 17 2013 Chris Smart <csmart@kororaproject.org> - 1.1-2
