@@ -1,6 +1,6 @@
 Name:   google-chrome-release
-Version:  1.1
-Release:  2%{?dist}.1
+Version:  1.2
+Release:  1%{?dist}
 Summary:  Google Chrome repository configuration
 
 Group:  System Environment/Base
@@ -19,6 +19,9 @@ Google Chrome repository configuration.
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d -m 755 $RPM_BUILD_ROOT/etc/default
+install -m 644 google-chrome $RPM_BUILD_ROOT/etc/default/
+
 install -d -m 755 $RPM_BUILD_ROOT/etc/yum.repos.d
 install -m 644 google-chrome.repo $RPM_BUILD_ROOT/etc/yum.repos.d/
 
@@ -33,9 +36,13 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root,-)
 %doc
 /etc/pki/rpm-gpg/RPM-GPG-KEY-google-chrome
+/etc/default/google-chrome
 %config(noreplace) /etc/yum.repos.d/google-chrome.repo
 
 %changelog
+* Sat Jul 25 2015 Ian Firns <firnsy@kororaproject.org> - 1.2-2
+- Don't let chrome do it's own repo management, that's our job.
+
 * Sat Aug 17 2013 Chris Smart <csmart@kororaproject.org> - 1.1-2
 - Exclude beta and unstable packages by default, leaving only stable.
 
