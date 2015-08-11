@@ -1,6 +1,6 @@
 Name:   google-chrome-release
 Version:  1.2
-Release:  1%{?dist}
+Release:  3%{?dist}
 Summary:  Google Chrome repository configuration
 
 Group:  System Environment/Base
@@ -40,6 +40,9 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) /etc/yum.repos.d/google-chrome.repo
 
 %changelog
+* Wed Aug 12 2015 Chris Smart <csmart@kororaproject.org> - 1.2-3
+- Fix content of google-chrome config to prevent overwriting of repo config. Thanks to @jeka on GitHub.
+
 * Sat Jul 25 2015 Ian Firns <firnsy@kororaproject.org> - 1.2-2
 - Don't let chrome do it's own repo management, that's our job.
 
